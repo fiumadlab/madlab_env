@@ -1,0 +1,16 @@
+#! /bin/bash
+
+function hcp_env()
+{
+source /home/amattfel/.env/.hpc_environment
+}
+
+function cmind_env()
+{
+source /home/amattfel/.env/.cmind_environment
+}
+
+function adhd200_env()
+{
+source /home/amattfel/.env/.adhd200_environment
+}
