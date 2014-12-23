@@ -49,6 +49,27 @@ https://github.com/mattfeld/madlab\_env.git**
 
 **>>> ls -la**
 
+7. Modify your ~/.ssh/config file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Test if SSH over the HTTPS port is possible, run this SSH command:
+
+**>>> ssh -T -p 443 git@ssh.github.com**
+
+You should see:
+
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+
+Enabling SSH connections over HTTPS
+
+**>>> vi ~/.ssh/config**
+
+Add the following lines:
+
+Host github.com
+ Hostname ssh.github.com
+ Port 443
+
 Examples
 ========
 
