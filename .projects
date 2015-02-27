@@ -2,7 +2,7 @@
 
 function hcp_env()
 {
-source /home/data/madlab/envs/.env/.hpc_environment
+source /home/data/madlab/envs/.env/.hcp_environment
 }
 
 function cmind_env()
