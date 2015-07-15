@@ -20,7 +20,7 @@ umask 0002
 PATH=$PATH:$HOME/bin
 # ATM added during October setup
 ANTSPATH=${ANTSPATH:="/home/applications/ANTs/1.9.4/bin/"}
-PYTHONPATH="${PYTHONPATH}:/data/madlab/scripts"
+PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 
 export PATH
 # ATM added during October setup
