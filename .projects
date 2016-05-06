@@ -25,3 +25,8 @@ function wmaze_env()
 source /home/data/madlab/envs/.env/.wmaze_environment
 }
 
+function seqtrd_env()
+{
+source /home/data/madlab/envs/.env/.seqtrd_environment
+}
+

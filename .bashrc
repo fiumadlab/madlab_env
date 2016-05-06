@@ -16,7 +16,12 @@ fi
 # Project specific environments
 source ~/.projects
 
+# Permissions
+umask 0002
+
 # User specific aliases and functions
+# Added by Cassian 03/29/2016
+umask g+w 
 alias ls="ls --color=auto"
 # Setup a fancy shell command prompt:
 prompt1="\[\e[0;33m\][\A]\[\e[0m\]" # Display the time in the bash prompt
