@@ -40,7 +40,11 @@ https://github.com/mattfeld/madlab\_env.git**
 
 **>>> cd /place/of/repository**
 
-**>>> python setup.py**
+**You will need to do the following:**
+**>>> mkdir ~/madlab_git_repo**
+**>>> cd ~/madlab_git_repo**
+
+**>>> python madlab_env_setup.py**
 
 6. Make sure you have a symlinked .bash\_profile and .bashrc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,6 +74,14 @@ Host github.com
  Hostname ssh.github.com
 
  Port 443
+
+8. Modify your ~/.git/config file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Change your [remote "origin"] url to the following:
+
+**url = ssh://git@github.com/YOURUSERNAME/madlab_env.git**
+
 
 Examples
 ========
