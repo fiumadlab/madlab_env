@@ -30,3 +30,7 @@ function seqtrd_env()
 source /home/data/madlab/envs/.env/.seqtrd_environment
 }
 
+function adnidod_env()
+{
+source /home/data/madlab/envs/.env/.adnidod_environment
+}
