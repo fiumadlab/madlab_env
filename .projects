@@ -34,3 +34,9 @@ function adnidod_env()
 {
 source /home/data/madlab/envs/.env/.adnidod_environment
 }
+
+function lossaver_env()
+{
+source /home/data/madlab/envs/.env/.lossaversion_environment
+}
+
