@@ -40,3 +40,7 @@ function lossaver_env()
 source /home/data/madlab/envs/.env/.lossaversion_environment
 }
 
+function emu_env()
+{
+source /home/data/madlab/envs/.env/.emu_environment
+}
