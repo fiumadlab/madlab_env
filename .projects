@@ -44,3 +44,8 @@ function emu_env()
 {
 source /home/data/madlab/envs/.env/.emu_environment
 }
+
+function ping_env()
+{
+source /home/data/madlab/envs/.env/.ping_environment
+}
