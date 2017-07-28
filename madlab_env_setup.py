@@ -5,13 +5,13 @@ import time
 FILES = ['.bashrc', '.bash_profile', '.projects', '.env', '.nodeload']
 
 for f in FILES:
-    if os.path.exists(os.path.expanduser('~/%s'%f)):
+    if os.path.exists(os.path.expanduser('~/{0}'.format(f))):
         now = ''.join(time.ctime().split(' ')).replace(':', '')
-        newname = '~/%s_%s'%(f, now)
-        cmd = 'mv ~/%s %s'%(f, newname)
+        newname = '~/{0}_{1}'.format(f, now)
+        cmd = 'mv ~/{0} {1}'.format(f, newname)
         print(cmd)
         os.system(cmd)
-    cmd = 'ln -s %s ~/'%os.path.abspath(f)
+    cmd = 'ln -s {} ~/'.format(os.path.abspath(f))
     print(cmd)
     os.system(cmd)
 
