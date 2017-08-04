@@ -27,3 +27,7 @@ export PATH
 export PYTHONPATH
 export ANTSPATH
 
+<<<<<<< HEAD
+alias MAD_DATA='/home/data/madlab/data'
+=======
+>>>>>>> 80c81d62287536f3011d4ea7c58a1ed912c13709
