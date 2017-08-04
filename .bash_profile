@@ -26,4 +26,3 @@ export PATH
 # ATM added during October setup
 export PYTHONPATH
 export ANTSPATH
-
