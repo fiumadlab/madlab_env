@@ -1,0 +1,46 @@
+#! /bin/bash
+
+function hcp_env()
+{
+source /home/data/madlab/envs/.env/.hcp_environment
+}
+
+function cmind_env()
+{
+source /home/data/madlab/envs/.env/.cmind_environment
+}
+
+function adhd200_env()
+{
+source /home/data/madlab/envs/.env/.adhd200_environment
+}
+
+function tol_env()
+{
+source /home/data/madlab/envs/.env/.tolerance_environment
+}
+
+function wmaze_env()
+{
+source /home/data/madlab/envs/.env/.wmaze_environment
+}
+
+function seqtrd_env()
+{
+source /home/data/madlab/envs/.env/.seqtrd_environment
+}
+
+function adnidod_env()
+{
+source /home/data/madlab/envs/.env/.adnidod_environment
+}
+
+function lossaver_env()
+{
+source /home/data/madlab/envs/.env/.lossaversion_environment
+}
+
+function emu_env()
+{
+source /home/data/madlab/envs/.env/.emu_environment
+}
