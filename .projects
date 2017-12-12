@@ -49,3 +49,9 @@ function ping_env()
 {
 source /home/data/madlab/envs/.env/.ping_environment
 }
+
+function rtv_env()
+{
+source /home/data/madlab/envs/.env/.rtv_environment
+}
+
