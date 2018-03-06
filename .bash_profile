@@ -2,6 +2,7 @@ if [ -f /home/share/Modules/global/profile.modules ]
 then
 	. /home/share/Modules/global/profile.modules
 # put your own module loads here
+        module load slurm/17.02.2
 	module load lsf
         module load gcc/4.8.1 
 fi
@@ -19,11 +20,11 @@ umask 0002
 
 PATH=$PATH:$HOME/bin
 # ATM added during October setup
-ANTSPATH=${ANTSPATH:="/home/applications/ANTs/1.9.4/bin/"}
+#ANTSPATH=${ANTSPATH:="/home/applications/ANTs/1.9.4/bin/"}
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 
 export PATH
 # ATM added during October setup
 export PYTHONPATH
-export ANTSPATH
+#export ANTSPATH
 
