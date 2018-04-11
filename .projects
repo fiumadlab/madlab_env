@@ -55,3 +55,8 @@ function rtv_env()
 source /home/data/madlab/envs/.env/.rtv_environment
 }
 
+function dev_py3()
+{
+source /home/data/madlab/envs/.env/.devpy3_environment
+}
+
