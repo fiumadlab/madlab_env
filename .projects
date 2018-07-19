@@ -57,6 +57,6 @@ source /home/data/madlab/envs/.env/.devpy3_environment
 
 function emuR01_env()
 {
-source /home/data/madlab/envs/.env/.emrR01_environment
+source /home/data/madlab/envs/.env/.emuR01_environment
 }
 
