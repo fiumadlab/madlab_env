@@ -15,11 +15,6 @@ function adhd200_env()
 source /home/data/madlab/envs/.env/.adhd200_environment
 }
 
-function tol_env()
-{
-source /home/data/madlab/envs/.env/.tolerance_environment
-}
-
 function wmaze_env()
 {
 source /home/data/madlab/envs/.env/.wmaze_environment
@@ -58,5 +53,10 @@ source /home/data/madlab/envs/.env/.rtv_environment
 function dev_py3()
 {
 source /home/data/madlab/envs/.env/.devpy3_environment
+}
+
+function emuR01_env()
+{
+source /home/data/madlab/envs/.env/.emrR01_environment
 }
 
