@@ -2,7 +2,8 @@ if [ -f /home/share/Modules/global/profile.modules ]
 then
 	. /home/share/Modules/global/profile.modules
 # put your own module loads here
-        module load slurm/17.02.2
+        #module load slurm/17.02.2
+        #module load slurm
 	module load lsf
         module load gcc/4.8.1 
 fi
