@@ -60,3 +60,7 @@ function emuR01_env()
 source /home/data/madlab/envs/.env/.emuR01_environment
 }
 
+function rtv_py3_env()
+{
+source /home/data/madlab/envs/.env/.rtv_py3_environment
+}
