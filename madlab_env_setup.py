@@ -1,20 +1,20 @@
-"""sets up environment and profiles for MaDLab projects"""
 import os
 import time
+from subprocess import Popen
 
+files = ['.bashrc', '.bash_profile', '.projects', '.nodeload']
 
-FILES = ['.bashrc', '.bash_profile', '.projects', '.env', '.nodeload']
-
-for f in FILES:
-    if os.path.exists(os.path.expanduser('~/{0}'.format(f))):
+for file_name in files:
+    sym_path = os.path.dirname(os.path.realpath(__file__)) + '/' + file_name
+    if os.path.exists(os.path.expanduser('~/{0}'.format(file_name))):
         now = ''.join(time.ctime().split(' ')).replace(':', '')
-        newname = '~/{0}_{1}'.format(f, now)
-        cmd = 'mv ~/{0} {1}'.format(f, newname)
+        newname = '~/%s_%s' % (file_name, now)
+        cmd = 'mv ~/%s %s' % (file_name, newname)
         print(cmd)
-        os.system(cmd)
-    cmd = 'ln -s {0} ~/'.format(os.path.abspath(f))
+        Popen(cmd, shell=True).wait()
+    cmd = 'ln -s %s ~/' % os.path.abspath(sym_path)
     print(cmd)
-    os.system(cmd)
+    Popen(cmd, shell=True).wait()
 
 if not os.path.exists(os.path.expanduser('~/.custom_env')):
-    os.system('touch ~/.custom_env')
+    Popen('touch ~/.custom_env', shell=True).wait()

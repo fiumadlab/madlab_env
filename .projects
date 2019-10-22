@@ -15,11 +15,6 @@ function adhd200_env()
 source /home/data/madlab/envs/.env/.adhd200_environment
 }
 
-function tol_env()
-{
-source /home/data/madlab/envs/.env/.tolerance_environment
-}
-
 function wmaze_env()
 {
 source /home/data/madlab/envs/.env/.wmaze_environment
@@ -43,4 +38,29 @@ source /home/data/madlab/envs/.env/.lossaversion_environment
 function emu_env()
 {
 source /home/data/madlab/envs/.env/.emu_environment
+}
+
+function ping_env()
+{
+source /home/data/madlab/envs/.env/.ping_environment
+}
+
+function rtv_env()
+{
+source /home/data/madlab/envs/.env/.rtv_environment
+}
+
+function dev_py3()
+{
+source /home/data/madlab/envs/.env/.devpy3_environment
+}
+
+function emuR01_env()
+{
+source /home/data/madlab/envs/.env/.emuR01_environment
+}
+
+function rtv_py3_env()
+{
+source /home/data/madlab/envs/.env/.rtv_py3_environment
 }
