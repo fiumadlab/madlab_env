@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 if [[ -f /home/share/Modules/global/profile.modules ]]; then
-=======
-if [ -f /home/share/Modules/global/profile.modules ]; then
->>>>>>> 00bd8b31bce7525af7776184c48bc25870468ed4
 	. /home/share/Modules/global/profile.modules
 # put your own module loads here
         #module load slurm/17.02.2
