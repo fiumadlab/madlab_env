@@ -6,7 +6,6 @@ files = ['.bashrc', '.bash_profile', '.projects', '.nodeload']
 
 for file_name in files:
     sym_path = os.path.dirname(os.path.realpath(__file__)) + '/' + file_name
-    print(sym_path)
     if os.path.exists(os.path.expanduser('~/{0}'.format(file_name))):
         now = ''.join(time.ctime().split(' ')).replace(':', '')
         newname = '~/%s_%s' % (file_name, now)

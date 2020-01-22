@@ -64,3 +64,14 @@ function rtv_py3_env()
 {
 source /home/data/madlab/envs/.env/.rtv_py3_environment
 }
+
+function ebc_env()
+{
+source /home/data/madlab/envs/.env/.ebc_environment
+}
+
+function vcat_env()
+{
+source /home/data/madlab/envs/.env/.vcat_environment
+}
+
