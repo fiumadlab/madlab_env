@@ -35,8 +35,3 @@ export PATH="/home/amattfel/miniconda3/bin:$PATH"
 # Project-specific environments
 source /home/data/cis/training-week-2019/environments
 
-<<<<<<< HEAD
-=======
-#prompt1="\[\e[1;39m\]\u@\h:\W\$\[\e[0m\]"
-#PROMPT_COMMAND='PS1="\[\e[1;33m\]${project_name}\[\e[0;0m\]${prompt1} "'
->>>>>>> 46f73c6908247ac05cc629d6567b4c2611add718
