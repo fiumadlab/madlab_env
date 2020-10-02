@@ -4,12 +4,21 @@ if [ -f /home/share/Modules/global/profile.modules ]; then
         #module load slurm/17.02.2
         module load slurm
 	#module load lsf
+<<<<<<< HEAD
         module load gcc 
 fi
 #export CENTOS_VER=$(rpm --eval '%{centos_ver}')
 if [ $(rpm --eval '${centos_ver}') == "7" ]; then
          . /home/share/Modules/4.1.3/init/profile.sh
          module load singularity-3
+=======
+        module load gcc
+fi
+#export CENTOS_VER=$(rpm --eval '%{centos_ver}')
+if [ $(rpm --eval '%{centos_ver}') == "7" ]; then 
+        . /home/share/Modules/4.1.3/init/profile.sh
+        module load singularity-3 
+>>>>>>> 46f73c6908247ac05cc629d6567b4c2611add718
 fi
 module load git
 module load slurm
