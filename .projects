@@ -92,5 +92,5 @@ source /home/data/madlab/envs/.env/.afni_environment
 
 function psb6351_env()
 {
-source /home/data/madlab/envs/.env/.psb6351_2020_environment
+source /home/data/madlab/envs/.env/.psb6351_environment
 }
