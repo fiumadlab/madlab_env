@@ -30,8 +30,9 @@ promptinfo=`${HOME}/.nodeload`
 PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
 
 . /home/share/Modules/4.1.3/init/profile.sh
+. /home/amattfel/miniconda3/etc/profile.d/conda.sh
 # added by Miniconda3 installer
-export PATH="/home/amattfel/miniconda3/bin:$PATH"
+#export PATH="/home/amattfel/miniconda3/bin:$PATH"
 # Project-specific environments
-source /home/data/cis/training-week-2019/environments
+#source /home/data/cis/training-week-2019/environments
 
