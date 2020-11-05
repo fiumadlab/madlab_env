@@ -30,9 +30,25 @@ promptinfo=`${HOME}/.nodeload`
 PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
 
 . /home/share/Modules/4.1.3/init/profile.sh
-. /home/amattfel/miniconda3/etc/profile.d/conda.sh
+# . /home/nmuncy/miniconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 # added by Miniconda3 installer
 #export PATH="/home/amattfel/miniconda3/bin:$PATH"
 # Project-specific environments
 #source /home/data/cis/training-week-2019/environments
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nmuncy/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nmuncy/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nmuncy/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nmuncy/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

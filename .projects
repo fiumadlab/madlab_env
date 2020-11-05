@@ -94,3 +94,8 @@ function psb6351_env()
 {
 source /home/data/madlab/envs/.env/.psb6351_environment
 }
+
+function mvpa_env()
+{
+source /home/data/madlab/envs/.env/.mvpa_environment
+}

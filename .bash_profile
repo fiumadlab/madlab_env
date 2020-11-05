@@ -19,6 +19,8 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+. ~/.bash_personal
+
 # User specific environment and startup programs
 
 # Permissions
