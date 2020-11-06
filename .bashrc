@@ -23,12 +23,10 @@ umask g+w
 alias ls="ls --color=auto"
 
 # Setup a fancy shell command prompt:
-#prompt1="\[\e[0;33m\][\A]\[\e[0m\]" # Display the time in the bash prompt
-#prompt2="\[\e[1;39m\]\u@\h:\W\$\[\e[0m\]" # Add username@host:dir$
-#promptinfo=`${HOME}/.nodeload`
-#PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
-
-PS1='\e[0;32m[\u \W]: \e[m'
+prompt1="\[\e[0;33m\][\A]\[\e[0m\]" # Display the time in the bash prompt
+prompt2="\[\e[1;39m\]\u@\h:\W\$\[\e[0m\]" # Add username@host:dir$
+promptinfo=`${HOME}/.nodeload`
+PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
 
 . /home/share/Modules/4.1.3/init/profile.sh
 . ${HOME}/miniconda3/etc/profile.d/conda.sh
