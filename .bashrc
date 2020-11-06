@@ -5,8 +5,6 @@ case "$0" in
     -bash|bash|*/bash)	modules_shell=bash ;;
 esac
 module() { eval `/home/share/Modules/default/bin/modulecmd $modules_shell $*`; }
-#module() { eval `/bin/modulecmd $modules_shell $*`; }
-# .bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -21,18 +19,17 @@ umask 0002
 
 # User specific aliases and functions
 # Added by Cassian 03/29/2016
-umask g+w 
+umask g+w
 alias ls="ls --color=auto"
+
 # Setup a fancy shell command prompt:
-prompt1="\[\e[0;33m\][\A]\[\e[0m\]" # Display the time in the bash prompt
-prompt2="\[\e[1;39m\]\u@\h:\W\$\[\e[0m\]" # Add username@host:dir$
-promptinfo=`${HOME}/.nodeload`
-PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
+#prompt1="\[\e[0;33m\][\A]\[\e[0m\]" # Display the time in the bash prompt
+#prompt2="\[\e[1;39m\]\u@\h:\W\$\[\e[0m\]" # Add username@host:dir$
+#promptinfo=`${HOME}/.nodeload`
+#PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
+
+PS1='\e[0;32m[\u \W]: \e[m'
 
 . /home/share/Modules/4.1.3/init/profile.sh
-. /home/amattfel/miniconda3/etc/profile.d/conda.sh
-# added by Miniconda3 installer
-#export PATH="/home/amattfel/miniconda3/bin:$PATH"
-# Project-specific environments
-#source /home/data/cis/training-week-2019/environments
+. ${HOME}/miniconda3/etc/profile.d/conda.sh
 

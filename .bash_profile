@@ -2,7 +2,7 @@ if [ -f /home/share/Modules/global/profile.modules ]; then
 	. /home/share/Modules/global/profile.modules
 # put your own module loads here
         module load slurm
-        module load gcc 
+        module load gcc
 fi
 if [ $(rpm --eval '${centos_ver}') == "7" ]; then
          . /home/share/Modules/4.1.3/init/profile.sh
@@ -12,25 +12,25 @@ fi
 module load git
 module load slurm
 
-# .bash_profile
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-# User specific environment and startup programs
+if [ -f ~/.custom_env ]; then
+        . ~/.custom_env
+fi
 
+
+# User specific environment and startup programs
 # Permissions
 umask 0002
+umask g+w
 
-PATH=$PATH:$HOME/bin
-# ATM added during October setup
-#ANTSPATH=${ANTSPATH:="/home/applications/ANTs/1.9.4/bin/"}
-PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
-
-export PATH
-# ATM added during October setup
+PYTHONPATH=~/miniconda3/bin
 export PYTHONPATH
-#export ANTSPATH
+
+PATH=${PYTHONPATH}:${PATH}:${HOME}/bin
+export PATH
 
