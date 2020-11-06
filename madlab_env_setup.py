@@ -5,10 +5,10 @@ files = [".bashrc", ".bash_profile", ".projects", ".nodeload"]
 
 for file_name in files:
     out_file = os.path.expanduser(f"~/{file_name}")
+    if os.path.islink(out_file):
+        break
     sym_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), file_name)
     if os.path.exists(out_file):
-        if os.path.islink(out_file):
-            pass
         now = "".join(time.ctime().split(" ")).replace(":", "")
         os.rename(out_file, f"{out_file}_{now}")
     os.symlink(sym_path, out_file)
