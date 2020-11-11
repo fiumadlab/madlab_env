@@ -1,20 +1,18 @@
 import os
 import time
-from subprocess import Popen
 
-files = ['.bashrc', '.bash_profile', '.projects', '.nodeload']
+files = [".bashrc", ".bash_profile", ".projects", ".nodeload"]
 
 for file_name in files:
-    sym_path = os.path.dirname(os.path.realpath(__file__)) + '/' + file_name
-    if os.path.exists(os.path.expanduser('~/{0}'.format(file_name))):
-        now = ''.join(time.ctime().split(' ')).replace(':', '')
-        newname = '~/%s_%s' % (file_name, now)
-        cmd = 'mv ~/%s %s' % (file_name, newname)
-        print(cmd)
-        Popen(cmd, shell=True).wait()
-    cmd = 'ln -s %s ~/' % os.path.abspath(sym_path)
-    print(cmd)
-    Popen(cmd, shell=True).wait()
+    out_file = os.path.expanduser(f"~/{file_name}")
+    sym_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), file_name)
+    if os.path.exists(out_file):
+        if os.path.islink(out_file):
+            break
+        now = "".join(time.ctime().split(" ")).replace(":", "")
+        os.rename(out_file, f"{out_file}_{now}")
+    os.symlink(sym_path, out_file)
 
-if not os.path.exists(os.path.expanduser('~/.custom_env')):
-    Popen('touch ~/.custom_env', shell=True).wait()
+cust_file = os.path.join(os.path.expanduser("~/.custom_env"))
+if not os.path.exists(cust_file):
+    open(cust_file, "w").close()
