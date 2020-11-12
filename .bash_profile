@@ -28,7 +28,7 @@ fi
 umask 0002
 umask g+w
 
-PYTHONPATH=~/miniconda3/bin
+PYTHONPATH=~/miniconda3/bin:/home/data/madlab/scripts
 export PYTHONPATH
 
 PATH=${PYTHONPATH}:${PATH}:${HOME}/bin
