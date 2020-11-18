@@ -2,7 +2,6 @@ if [ -f /home/share/Modules/global/profile.modules ]; then
 	. /home/share/Modules/global/profile.modules
 # put your own module loads here
         module load slurm
-        module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
         # The following moudule is loaded to enable us to 
         # source activate virtual conda environments - ATM 11/18/2020
         # see change to .bashrc file at the end to evaluate potential
