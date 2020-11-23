@@ -1,22 +1,13 @@
 if [ -f /home/share/Modules/global/profile.modules ]; then
 	. /home/share/Modules/global/profile.modules
+        . /home/share/Modules/4.1.3/init/profile.sh
 # put your own module loads here
+        module load singularity-3
         module load slurm
-        # The following moudule is loaded to enable us to 
-        # source activate virtual conda environments - ATM 11/18/2020
-        # see change to .bashrc file at the end to evaluate potential
-        # problems that may arise
-        module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg 
+        module load git-2.19.1-gcc-8.2.0-3vhlie7
+        module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg
+        . /home/applications/spack/applications/gcc-8.2.0/miniconda3-4.5.11-oqs2mbgv3mmo3dll2f2rbxt4plfgyqzv/etc/profile.d/conda.sh 
 fi
-if [ $(rpm --eval '${centos_ver}') == "7" ]; then
-         . /home/share/Modules/4.1.3/init/profile.sh
-         module load singularity-3
-fi
-
-module load git
-module load slurm
-
-# .bash_profile
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
@@ -29,12 +20,7 @@ fi
 umask 0002
 
 PATH=$PATH:$HOME/bin
-# ATM added during October setup
-#ANTSPATH=${ANTSPATH:="/home/applications/ANTs/1.9.4/bin/"}
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 
 export PATH
-# ATM added during October setup
 export PYTHONPATH
-#export ANTSPATH
-
