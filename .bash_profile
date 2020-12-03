@@ -18,9 +18,9 @@ fi
 
 # Permissions
 umask 0002
+umask g+w
 
 PATH=$PATH:$HOME/bin
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
-
 export PATH
 export PYTHONPATH
