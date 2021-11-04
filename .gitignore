@@ -1,0 +1,4 @@
+# Ignore Vim Temporary Files
+*~
+*.swp
+*.swo
