@@ -7,6 +7,7 @@ module load singularity-3
 module load git-2.29.0-gcc-8.2.0-wb3ybgg
 module load slurm
 
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
@@ -16,13 +17,9 @@ fi
 
 # Permissions
 umask 0002
+umask g+w
 
 PATH=$PATH:$HOME/bin
-# ATM added during October setup
-#ANTSPATH=${ANTSPATH:="/home/applications/ANTs/1.9.4/bin/"}
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
-
 export PATH
-# ATM added during October setup
 export PYTHONPATH
-#export ANTSPATH

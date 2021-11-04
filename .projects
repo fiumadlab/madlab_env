@@ -78,11 +78,13 @@ source $( realpath ./madlab_env/env/.sea_environment )
 function vcat_env()
 {
 source $( realpath ./madlab_env/env/.vcat_environment )
+
 }
 
 function ashs_env()
 {
 source $( realpath ./madlab_env/env/.env/.ashs_environment )
+
 }
 
 function afni_env()
@@ -94,4 +96,3 @@ function mvpa_env()
 {
 source $( realpath ./madlab_env/env/.mvpa_environment )
 }
-

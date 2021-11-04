@@ -5,13 +5,8 @@ nodeloadint=`echo ${nodeload} | awk -F . '{print $1}'`
 numcpus=`cat /proc/cpuinfo | grep -c processor`
 
 nodemem=`free | grep Mem`
-#nodememused=$((`echo ${nodemem} | awk '{print $3}'`-`echo ${nodemem} | awk '{print $7}'` - `echo ${nodemem} | awk '{print $6}'`))
 nodememtotal=`echo ${nodemem} | awk '{print $2}'`
-if [ $(rpm --eval '%{centos_ver'}) == '7' ]; then
-        nodememused=$((`echo ${nodemem} | awk '{print $3}'`))
-else
-        nodememused=$((`echo ${nodemem} | awk '{print $3}'`-`echo ${nodemem} | awk '{print $7}'` - `echo ${nodemem} | awk '{print $6}'`))
-fi
+nodememused=$((`echo ${nodemem} | awk '{print $3}'`))
 nodemem=$((99*${nodememused}/${nodememtotal}))
 if [ $nodeloadint -ge $((100*${numcpus}/5*4/100)) ]
 then
