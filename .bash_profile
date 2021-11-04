@@ -1,25 +1,15 @@
 if [[ -f /home/share/Modules/global/profile.modules ]]; then
-	. /home/share/Modules/global/profile.modules
+        . /home/share/Modules/global/profile.modules
+fi
 # put your own module loads here
-        #module load slurm/17.02.2
-        module load slurm
-	#module load lsf
-        module load gcc
-fi
-
-#export CENTOS_VER=$(rpm --eval '%{centos_ver}')
-if [ $(rpm --eval '%{centos_ver}') == "7" ]; then
-        . /home/share/Modules/4.1.3/init/profile.sh
-        module load singularity-3
-fi
-module load git
+module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
+module load singularity-3
+module load git-2.29.0-gcc-8.2.0-wb3ybgg
 module load slurm
-
-# .bash_profile
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
+        . ~/.bashrc
 fi
 
 # User specific environment and startup programs

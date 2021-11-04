@@ -15,21 +15,20 @@ fi
 nodemem=$((99*${nodememused}/${nodememtotal}))
 if [ $nodeloadint -ge $((100*${numcpus}/5*4/100)) ]
 then
-	echo -en "\[\e[1;31m\][$nodeload]\[\e[0m\]"
+        echo -en "\[\e[1;31m\][$nodeload]\[\e[0m\]"
 elif [ $nodeloadint -ge $((100*${numcpus}/2*1/100)) ]
 then
-	echo -en "\[\e[1;33m\][$nodeload]\[\e[0m\]"
+        echo -en "\[\e[1;33m\][$nodeload]\[\e[0m\]"
 else
-	echo -en "\[\e[1;32m\][$nodeload]\[\e[0m\]"
+        echo -en "\[\e[1;32m\][$nodeload]\[\e[0m\]"
 fi
 
 if [ $nodemem -ge 80 ]
 then
-	echo -en "\[\e[1;31m\][$nodemem%]\[\e[0m\]"
+        echo -en "\[\e[1;31m\][$nodemem%]\[\e[0m\]"
 elif [ $nodemem -ge 50 ]
 then
-	echo -en "\[\e[1;33m\][$nodemem%]\[\e[0m\]"
+        echo -en "\[\e[1;33m\][$nodemem%]\[\e[0m\]"
 else
-	echo -en "\[\e[1;32m\][$nodemem%]\[\e[0m\]"
+        echo -en "\[\e[1;32m\][$nodemem%]\[\e[0m\]"
 fi
-

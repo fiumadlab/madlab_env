@@ -2,7 +2,12 @@
 
 function hcp_env()
 {
-source /home/data/madlab/envs/.env/.hcp_environment
+source $( realpath ./.hcp_environment )
+}
+
+function poldrack_env()
+{
+source /home/data/madlab/envs/.env/.poldrack_environment
 }
 
 function cmind_env()
@@ -65,13 +70,28 @@ function rtv_py3_env()
 source /home/data/madlab/envs/.env/.rtv_py3_environment
 }
 
-function ebc_env()
+function sea_env()
 {
-source /home/data/madlab/envs/.env/.ebc_environment
+source /home/data/madlab/envs/.env/.sea_environment
 }
 
 function vcat_env()
 {
 source /home/data/madlab/envs/.env/.vcat_environment
+}
+
+function ashs_env()
+{
+source /home/data/madlab/envs/.env/.ashs_environment
+}
+
+function afni_env()
+{
+source /home/data/madlab/envs/.env/.afni_environment
+}
+
+function mvpa_env()
+{
+source /home/data/madlab/envs/.env/.mvpa_environment
 }
 

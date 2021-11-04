@@ -1,0 +1,47 @@
+# load modules
+module load fsl-6.0.3
+module load ants-2.2.0-gcc-4.8.5-g5ghl22
+module load afni-20.2.06
+module load pcre2-10.35-gcc-8.2.0-rpvamyh
+module load r-4.0.2-gcc-8.2.0-tf4pnwr
+module load matlab-2019b #NOT SURE THIS IS CENTOS7 or IF THAT MAKES SENSE
+module load freesurfer-7.1
+module load dcm2niix-1.0.20190902
+module load ashs/fastashs_2.0.0
+module load cuda-10.0.130-gcc-8.2.0-xeppy24
+module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
+
+module load c3d-1.0.0-gcc-8.2.0
+module load dtiprep-1.2.11
+module load slicer-4.11.2
+module load itk-snap-3.8.0
+
+# set software vars
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
+
+# proj name
+export project_name="RTV_PY3"
+
+# setup python dir
+conda activate /home/data/madlab/envs/rtv_py3_madlab_env
+
+# Setup Freesurfer
+export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer
+source $FREESURFER_HOME/FreeSurferEnv.sh
+export SUBJECTS_DIR=/home/data/madlab/surfaces/rtv
+
+# Setup SPM
+export SPM_PATH=/home/applications/spm12_x86_64
+export WFU_PATH=/home/data/madlab/scripts/WFU_PickAtlas_3.0.5b/wfu_pickatlas/
+export CONN_PATH=/home/data/madlab/scripts/conn15g/conn
+export FMRIPOWER_PATH=/home/data/madlab/scripts/fmripower
+
+# Setup python path for utility functions
+PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
+export PYTHONPATH
+PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts/mattfeld_utility_workflows"
+export PYTHONPATH
+
+# Setup Multithreading
+export MKL_NUM_THREADS=4
+export OMP_NUM_THREADS=4
