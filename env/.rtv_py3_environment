@@ -1,8 +1,9 @@
-# load modules
+#!/bin/bash
+
+# Setup Nipype, FSL, AFNI, Freesurfer, ANTS, Matlab
 module load fsl-6.0.3
 module load ants-2.2.0-gcc-4.8.5-g5ghl22
 module load afni-20.2.06
-module load pcre2-10.35-gcc-8.2.0-rpvamyh
 module load r-4.0.2-gcc-8.2.0-tf4pnwr
 module load matlab-2019b #NOT SURE THIS IS CENTOS7 or IF THAT MAKES SENSE
 module load freesurfer-7.1
@@ -10,17 +11,18 @@ module load dcm2niix-1.0.20190902
 module load ashs/fastashs_2.0.0
 module load cuda-10.0.130-gcc-8.2.0-xeppy24
 module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
-
 module load c3d-1.0.0-gcc-8.2.0
 module load dtiprep-1.2.11
 module load slicer-4.11.2
 module load itk-snap-3.8.0
+module load singularity-3.5.3
 
 # set software vars
 export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
 
 # proj name
 export project_name="RTV_PY3"
+export TMPDIR="/tmp/"
 
 # setup python dir
 conda activate /home/data/madlab/envs/rtv_py3_madlab_env
@@ -41,6 +43,9 @@ PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 export PYTHONPATH
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts/mattfeld_utility_workflows"
 export PYTHONPATH
+
+# Setup ANTS path
+export ANTSPATH=/home/applications/spack/applications/gcc-4.8.5/ants-2.2.0-g5ghl22hmh7vjyeu4rcploxyomrfjzxz/bin
 
 # Setup Multithreading
 export MKL_NUM_THREADS=4
