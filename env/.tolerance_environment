@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
+module add fsl/5.0.8
+module load ANTs/1.9.4
+#module add freesurfer/5.3.0
+module add matlab/2013b/front
+module add mricron/6-2013
+module add miniconda/2.7
+module add afni/openmp
+module add R/3.1.2
+module load cuda/5.5
+module loade c3d/1.0.0
+source /home/applications/fsl/5.0.7/etc/fslconf/fsl.sh #This will setup my $FSLDIR
+module add dtiprep/1.2.4
+module add slicer/4.3.1
+module add itk-snap/3.0.0
+
+# Setup Freesurfer
+export FREESURFER_HOME=/home/applications/freesurfer
+source $FREESURFER_HOME/FreeSurferEnv.sh
+export SUBJECTS_DIR=/home/data/madlab/surfaces/tolerance
+
+# Setup SPM
+export SPM_PATH=/home/applications/spm12
+export WFU_PATH=/home/data/madlab/scripts/WFU_PickAtlas_3.0.5b/wfu_pickatlas/
+export CONN_PATH=/home/data/madlab/scripts/conn15g/conn
+
+# Setup project specific python environment
+source activate /home/data/madlab/envs/tolerance_madlab_env
+
+# Setup python path for utility functions
+PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
+export PYTHONPATH
+PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts/mattfeld_utility_workflows"
+export PYTHONPATH
+
+# Setup ANTs threading to 1
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
+
+# Setup Multithreading
+export MKL_NUM_THREADS=4
+export OMP_NUM_THREADS=4
+
+export project_name="TOL"
+

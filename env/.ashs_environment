@@ -1,0 +1,18 @@
+# load modules
+module load c3d/1.0.0
+module load ants-2.2.0-gcc-4.8.5-g5ghl22
+module load ashs/fastashs_2.0.0
+module load python-3.7.0-gcc-8.2.0-joh2xyk
+module load miniconda3-4.5.11-gcc-8.2.0-oqs2mbg
+
+# set software vars
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
+
+# proj name
+export project_name="ASHS"
+
+# setup python dir for reasons
+source activate /home/data/madlab/envs/ashs_env
+
+# print out
+echo; echo "Loaded ashs_env"; echo
