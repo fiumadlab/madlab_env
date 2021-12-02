@@ -17,7 +17,7 @@ source $( realpath ~/madlab_git_repos/madlab_env/env/.cmind_environment )
 
 function adhd200_env()
 {
-source $( realpath ~/madlab_git_repos/madlab_env/env/adhd200_environment )
+source $( realpath ~/madlab_git_repos/madlab_env/env/.adhd200_environment )
 }
 
 function wmaze_env()
