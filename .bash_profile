@@ -25,7 +25,6 @@ module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
 module load singularity-3
 module load git-2.29.0-gcc-8.2.0-wb3ybgg
 module load slurm
-. /home/applications/spack/applications/gcc-8.2.0/miniconda3-4.5.11-oqs2mbgv3mmo3dll2f2rbxt4plfgyqzv/etc/profile.d/conda.sh
 
 # Permissions
 umask 0002
