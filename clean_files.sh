@@ -1,2 +1,2 @@
-#! /bin/bash
-rm ~/.bashrc ~/.bash_profile ~/.nodeload ~/.projects
+#!/bin/bash
+rm ~/.{bashrc,bash_profile,nodeload,projects}
