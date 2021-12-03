@@ -46,7 +46,14 @@ if [ -f ~/.custom_env ]; then
 fi
 
 # Project-specific environments
-source ~/.projects
+function madlab_env (){
+       if [[ $# -eq 0 ]]; then
+              h_list=`ls -a $( realpath ~/madlab_env/env ) | awk -F [._] '{print $2}'`
+              echo -e "Available environments: \n ${h_list}"
+       else
+              eval `echo source $( realpath ~/madlab_env/env/.${1}_environment )`
+       fi
+}
 
 # User specific aliases and functions
 alias ls="ls --color=auto"
