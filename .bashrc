@@ -25,8 +25,7 @@ case "$0" in
               ;;
        -bash|bash|*/bash) modules_shell=bash
               ;;
-       *) echo "Setting sh as default shell" >&1
-              modules_shell=sh
+       *) modules_shell=sh
               ;;
 esac
 module() {
