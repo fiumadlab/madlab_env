@@ -44,13 +44,18 @@ if [ -f ~/.custom_env ]; then
        source ~/.custom_env
 fi
 
-# Project-specific environments
+# Project-specific environments - reference dir of symlinked ~/.bashrc
 function madlab_env (){
+
+       bashrc_path_resolved=`readlink ${HOME}/.bashrc`
+       madlab_path=${bashrc_path_resolved%\/*}
+
        if [[ $# -eq 0 ]]; then
-              h_list=`ls -a $( realpath ~/madlab_env/env ) | awk -F [._] '{print $2}'`
-              echo -e "Available environments: \n ${h_list}"
+              h_list=`ls -a ${madlab_path}/env | awk -F [._] '{print $2}'`
+              echo "Available environments:"
+              echo -e "\t$h_list"
        else
-              eval `echo source $( realpath ~/madlab_env/env/.${1}_environment )`
+              source ${madlab_path}/env/.${1}_environment
        fi
 }
 
