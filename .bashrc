@@ -51,9 +51,8 @@ function madlab_env (){
        madlab_path=${bashrc_path_resolved%\/*}
 
        if [[ $# -eq 0 ]]; then
-              h_list=`ls -a ${madlab_path}/env | awk -F [._] '{print $2}'`
-              echo "Available environments:"
-              echo -e "\t$h_list"
+              h_list=`ls -a ${madlab_path}/env | sed -nE 's/.(.*)_environment$/\1/p'`
+              echo -e "Available environments:\n$h_list"
        else
               source ${madlab_path}/env/.${1}_environment
        fi
