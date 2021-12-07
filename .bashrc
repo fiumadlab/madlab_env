@@ -44,8 +44,19 @@ if [ -f ~/.custom_env ]; then
        source ~/.custom_env
 fi
 
-# Project-specific environments
-source ~/.projects
+# Project-specific environments - reference dir of symlinked ~/.bashrc
+function madlab_env (){
+       # Usage:
+       #      "$ madlab_env" for list of available environments, or
+       #      "$ madlab_env <foo>" to conda activate environment foo.
+       madlab_resolved=`readlink ${HOME}/.bashrc | sed 's/\/\.bashrc*//'`
+       if [[ $# -eq 0 ]]; then
+              h_list=`ls -a ${madlab_resolved}/env | sed -nE 's/.(.*)_environment$/\1/p'`
+              echo -e "Available environments:\n$h_list"
+       else
+              source ${madlab_resolved}/env/.${1}_environment
+       fi
+}
 
 # User specific aliases and functions
 alias ls="ls --color=auto"
