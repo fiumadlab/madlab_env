@@ -1,27 +1,30 @@
 #!/bin/bash
 
 # Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
-module add fsl/5.0.8
+module add fsl-6.0.3 # Formerly fsl/5.0.8
 #module load ANTs/2.1.0
-module load ANTs/1.9.4
+module load ants-2.2.0-gcc-4.8.5-g5ghl22 #Formerly ANTs/1.9.4
 #module add freesurfer/5.3.0
-module add matlab/2013b/front
-module add mricron/6-2013
-module add miniconda/2.7
-module add afni/openmp
-module add R/3.1.2
-module load cuda/5.5
-module loade c3d/1.0.0
-source /home/applications/fsl/5.0.7/etc/fslconf/fsl.sh #This will setup my $FSLDIR
-module add dtiprep/1.2.4
-module add slicer/4.3.1
-module add itk-snap/3.0.0
+module add matlab-2019b #Formerly matlab/2013b/front
+#module add mricron/6-2013
+module add miniconda3-4.5.11-gcc-8.2.0-oqs2mbg #Formerly miniconda/2.7
+module add afni-20.2.06 #Formerly afni/openmp
+#module add R/3.1.2
+module load cuda-8.0.61-gcc-8.2.0-fdyontd #Formerly cuda/5.5
+module load c3d-1.0.0-gcc-8.2.0 #Formerly  c3d/1.0.0
+#source /home/applications/fsl/5.0.7/etc/fslconf/fsl.sh #This will setup my $FSLDIR
+module add dtiprep-1.2.11 #Formerly dtiprep/1.2.4
+#module add slicer/4.3.1
+module add itk-snap-3.8.0 #Formerly itk-snap/3.0.0
+module load gcc-7.2.0-gcc-4.8.5-urrgcwy # Formerly 7.1.0
+module load dcm2niix-1.0.20190902
+module load singularity-3.5.3
 
 # Setup project specific python environment
-source activate /home/data/madlab/envs/lossaversion_madlab_env
+conda activate /home/data/madlab/envs/lossaversion_madlab_env
 
 # Setup Freesurfer
-export FREESURFER_HOME=/home/applications/freesurfer
+export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer
 source $FREESURFER_HOME/FreeSurferEnv.sh
 export SUBJECTS_DIR=/home/data/madlab/surfaces/lossaversion
 
@@ -29,12 +32,19 @@ export SUBJECTS_DIR=/home/data/madlab/surfaces/lossaversion
 export SPM_PATH=/home/applications/spm12
 export WFU_PATH=/home/data/madlab/scripts/WFU_PickAtlas_3.0.5b/wfu_pickatlas/
 export CONN_PATH=/home/data/madlab/scripts/conn15g/conn
+export FMRIPOWER_PATH=/home/data/madlab/scripts/fmripower
 
 # Setup python path for utility functions
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 export PYTHONPATH
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts/mattfeld_utility_workflows"
 export PYTHONPATH
+
+# Setup ANTS path
+export ANTSPATH=/home/applications/spack/applications/gcc-4.8.5/ants-2.2.0-g5ghl22hmh7vjyeu4rcploxyomrfjzxz/bin
+#Directory to the $PATH so these files can be found
+#PATH=$PATH:/home/applications/ANTs/ANTs-2.1.0-Linux/Scripts/
+#export PATH
 
 # Setup ANTs threading to 1
 export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
