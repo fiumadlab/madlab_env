@@ -10,9 +10,9 @@ module load freesurfer-7.1
 # activate conda env
 conda activate  /home/data/madlab/envs/emuR01_unc_env
 
-# # set global vars
-# export project_name=emuR01_unc
-# export TMPDIR=/tmp/
+# set global vars
+export project_name=emuR01_unc
+export TMPDIR=/tmp/
 
 # print feedback
 echo -e "\n Activated emuR01_unc_env \n"
