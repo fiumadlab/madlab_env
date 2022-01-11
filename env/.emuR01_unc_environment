@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Specify modules
+module load c3d-1.0.0-gcc-8.2.0
+module load afni-20.2.06
+module load dcm2niix-1.0.20190902
+module load ants-2.3.5
+module load freesurfer-7.1
+
+# activate conda env
+conda activate  /home/data/madlab/envs/emuR01_unc_env
+
+# # set global vars
+# export project_name=emuR01_unc
+# export TMPDIR=/tmp/
+
+# print feedback
+echo -e "\n Activated emuR01_unc_env \n"
