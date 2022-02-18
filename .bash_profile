@@ -22,7 +22,7 @@ fi
 
 # Load relevant modules, miniconda
 module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
-module load singularity-3
+module load singularity-3.8.2
 module load git-2.29.0-gcc-8.2.0-wb3ybgg
 module load slurm
 

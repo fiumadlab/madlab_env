@@ -8,7 +8,7 @@ module load ANTs/1.9.4
 module add matlab/2013b/front
 module add mricron/6-2013
 module add miniconda/2.7
-module add afni/openmp
+module add afni-20.2.06
 module add R/3.1.2
 module load cuda/5.5
 module loade c3d/1.0.0
