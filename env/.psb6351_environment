@@ -1,26 +1,20 @@
-# load modules
-#module load fsl-6.0.3
-module load ants-2.2.0-gcc-4.8.5-g5ghl22
-module load afni-20.2.06
-module load pcre2-10.35-gcc-8.2.0-rpvamyh
-module load r-4.0.2-gcc-8.2.0-tf4pnwr
-module load matlab/2019b #NOT SURE THIS IS CENTOS7 or IF THAT MAKES SENSE
-module load freesurfer-7.1
-module load dcm2niix-1.0.20190902
-module load ashs/fastashs_2.0.0
+#!/bin/bash
+
+# Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
+module load fsl-6.0.4 
+module load ants-2.3.5
+module load matlab-2019b 
+module load afni-22.1.10
+module load r-4.2.0-gcc-8.2.0
+module load slurm
 module load cuda-10.0.130-gcc-8.2.0-xeppy24
-module load gcc-8.2.0-gcc-4.8.5-sxbf4jq
+module load dsistudio-centos7
+module add dtiprep-1.2.11
+module add slicer-4.11.2
+module add itk-snap-3.8.0
+module load gcc-8.2.0-gcc-4.8.5-sxbf4jq #Centos7
+module load dcm2niix-1.0.20190902
 
-#module load c3d/1.0.0 NO CENTOS7 VERSION
-#module add dtiprep/1.2.8 NO CENTOS7 VERSION
-#module add slicer/4.8.1 NO CENTOS7 VERSION
-#module add itk-snap/3.6.0 NO CENTOS7 VERSION
-
-# Don't know if I need the following:
-# module load icu4c-60.1-gcc-8.2.0-jxjn4lo
-# module load zlib-1.2.11-gcc-8.2.0-6wdekzy
-
- 
 # set software vars
 export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
 
@@ -33,11 +27,10 @@ conda activate /home/data/madlab/envs/psb6351_env
 # Setup Freesurfer
 export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer
 source $FREESURFER_HOME/FreeSurferEnv.sh
-#export SUBJECTS_DIR=/home/data/madlab/Mattfeld_PSB6351/mattfeld_2020/derivatives/freesurfer
-export SUBJECTS_DIR=/scratch/amattfel/te/derivatives/freesurfer
+export SUBJECTS_DIR=~/Mattfeld_PSB6351/derivatives/freesurfer
 
 # Setup SPM
-export SPM_PATH=/home/applications/spm12_x86_64
+export SPM_PATH=/home/applications/spm12
 export WFU_PATH=/home/data/madlab/scripts/WFU_PickAtlas_3.0.5b/wfu_pickatlas/
 export CONN_PATH=/home/data/madlab/scripts/conn15g/conn
 export FMRIPOWER_PATH=/home/data/madlab/scripts/fmripower
@@ -47,6 +40,7 @@ PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 export PYTHONPATH
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts/mattfeld_utility_workflows"
 export PYTHONPATH
+export ANTSPATH=/home/applications/ANTs/2.3.5/bin
 
 # Setup Multithreading
 export MKL_NUM_THREADS=4
