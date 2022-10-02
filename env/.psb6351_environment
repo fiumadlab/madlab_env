@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
+module load afni-20.2.06
 module load fsl-6.0.4 
 module load ants-2.3.5
-module load afni-22.1.10
 module load r-4.2.0-gcc-8.2.0
 module load dcm2niix-1.0.20190902
 
