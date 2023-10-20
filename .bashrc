@@ -37,7 +37,8 @@ if [ -f /etc/bashrc ]; then
        source /etc/bashrc
 fi
 
-. /home/applications/spack/applications/gcc-8.2.0/miniconda3-4.5.11-oqs2mbgv3mmo3dll2f2rbxt4plfgyqzv/etc/profile.d/conda.sh
+. /home/applications/miniconda3/23.5.2/etc/profile.d/conda.sh
+#. /home/applications/spack/applications/gcc-8.2.0/miniconda3-4.5.11-oqs2mbgv3mmo3dll2f2rbxt4plfgyqzv/etc/profile.d/conda.sh
 
 # Get user customizations
 if [ -f ~/.custom_env ]; then
@@ -57,6 +58,10 @@ function madlab_env (){
               source ${madlab_resolved}/env/.${1}_environment
        fi
 }
+
+# Permissions
+umask 0002
+umask g+w
 
 # User specific aliases and functions
 alias ls="ls --color=auto"

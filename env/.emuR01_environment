@@ -2,7 +2,8 @@
 
 # Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
 module add fsl-6.0.3 # Formerly 5.0.11
-module load ants-2.2.0-gcc-4.8.5-g5ghl22
+#module load ants-2.2.0-gcc-4.8.5-g5ghl22
+module load ants-2.3.5
 module add matlab-2019b
 #module add mricron/6-2013
 module add afni-20.2.06
