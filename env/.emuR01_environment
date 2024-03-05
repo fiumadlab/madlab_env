@@ -18,7 +18,7 @@ module load gcc-7.2.0-gcc-4.8.5-urrgcwy # Formerly 7.1.0
 module load dcm2niix-1.0.20190902
 module load singularity-3.5.3
 # Setup project specific python environment
-conda activate /home/data/madlab/envs/emuR01_madlab_env
+conda activate /home/data/madlab/envs/emuR01a_madlab_env
 
 # Setup Freesurfer
 export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer
