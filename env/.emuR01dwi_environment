@@ -49,5 +49,5 @@ export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
 export MKL_NUM_THREADS=4
 export OMP_NUM_THREADS=4
 
-export project_name="EMUR01rfMRI"
+export project_name="EMUR01dwi"
 export TMPDIR="/tmp/"
