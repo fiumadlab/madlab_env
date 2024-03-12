@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
-module add fsl/6.0.6 # Formerly 6.0.3
+module add fsl-6.0.6 # Formerly 6.0.3
 module load ants-2.3.5
 module add matlab-2019b
 #module add mricron/6-2013
