@@ -7,7 +7,7 @@ module add matlab-2019b
 #module add mricron/6-2013
 module add afni-20.2.06
 #module add R/3.4.3
-module load cuda-8.0.61-gcc-8.2.0-fdyontd
+module load cuda/11.8.0-gcc-13.2.0-epvkosd
 module load c3d-1.0.0-gcc-8.2.0
 #source /home/applications/fsl/5.0.7/etc/fslconf/fsl.sh #This will setup my $FSLDIR
 module add dtiprep-1.2.11 # Formerly 1.2.8
@@ -32,6 +32,8 @@ export FMRIPOWER_PATH=/home/data/madlab/scripts/fmripower
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts"
 export PYTHONPATH
 PYTHONPATH="${PYTHONPATH}:/home/data/madlab/scripts/mattfeld_utility_workflows"
+export PYTHONPATH
+PYTHONPATH="${PYTHONPATH}:/home/data/madlab/McMakin_EMUR01/code/func_processing/func_processing"
 export PYTHONPATH
 
 # Setup ANTS path
