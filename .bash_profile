@@ -25,7 +25,7 @@ fi
 module load singularity-3.8.2
 module load git-2.29.0-gcc-8.2.0-wb3ybgg
 module load slurm
-module load glibc-2.29
+#module load glibc-2.29
 
 # Permissions
 umask 0002
