@@ -13,7 +13,9 @@ module load c3d-1.0.0-gcc-8.2.0
 module load dtiprep-1.2.11 # Formerly 1.2.8
 #module add slicer-4.11.2 # Formerly 4.8.1
 #module add itk-snap-3.8.0 # Formerly 3.6.0
-module load gcc # Formerly 7.1.0
+module load gcc/13.2.0-gcc-4.8.5-nbz4wlc
+export LD_LIBRARY_PATH=/home/applications/spack_new_install/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-13.2.0-nbz4wlcurpza7iw45hztqxsiojicbjin/lib64:$LD_LIBRARY_PATH
+#module load gcc # Formerly 7.1.0
 module load dcm2niix-1.0.20190902
 module load singularity-3.5.3
 
