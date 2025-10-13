@@ -12,10 +12,7 @@ module add dtiprep-1.2.11
 #module add itk-snap-3.8.0
 module load gcc-7.2.0-gcc-4.8.5-urrgcwy
 module load dcm2niix-1.0.20190902
-module load singularity-3.5.3
-
-# Setup project specific python environment
-conda activate /home/data/madlab/envs/sea_env
+module load singularity-3.8.7
 
 # Setup Freesurfer
 export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer
@@ -40,6 +37,9 @@ export ANTSPATH=/home/applications/ANTs/2.2.0/bin
 #Directory to the $PATH so these files can be found
 #PATH=$PATH:/home/applications/ANTs/ANTs-2.1.0-Linux/Scripts/
 #export PATH
+
+# Setup project specific python environment
+conda activate /home/data/madlab/envs/sea_env
 
 # Setup ANTs threading to 1
 export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1

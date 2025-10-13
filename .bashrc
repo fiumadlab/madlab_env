@@ -37,8 +37,8 @@ if [ -f /etc/bashrc ]; then
        source /etc/bashrc
 fi
 
-. /home/applications/miniconda3/23.5.2/etc/profile.d/conda.sh
-#. /home/applications/spack/applications/gcc-8.2.0/miniconda3-4.5.11-oqs2mbgv3mmo3dll2f2rbxt4plfgyqzv/etc/profile.d/conda.sh
+. /home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/etc/profile.d/conda.sh
+#. /home/applications/miniconda3/23.5.2/etc/profile.d/conda.sh
 
 # Get user customizations
 if [ -f ~/.custom_env ]; then
